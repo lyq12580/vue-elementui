@@ -158,6 +158,18 @@ export const constantRoutes = [
       }
     ]
   },
+  {
+    path: 'more',
+    component: () => import('@/views/more/index'),
+    children: [
+      {
+        path: 'more',
+        meta: { title: 'more' }
+      }
+    ],
+    meta: { title: 'more', icon: 'link' }
+    // hidden: true
+  },
 
   // 404 page must be placed at the end !!!
   { path: '*', redirect: '/404', hidden: true }
